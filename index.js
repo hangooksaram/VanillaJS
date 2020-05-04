@@ -1,22 +1,16 @@
-console.log(console)
-//console은 object, log는 function
+const title = document.getElementById("title")
+const content = document.getElementById("content")
+//title.style.color = "red"
 
-function sayHello(hello, number){
-    console.log("Hello", hello, number)
+function handleClick(){
+    title.style.color = 'red'
 }
 
-sayHello("Nicolas", 15);
+title.addEventListener("click", handleClick)
 
-const daysOfWeek = [
-    {name : "dd",
-    age : "ss"},
-    {name : "dd",
-    age : "ss"},
-    {name : "dd",
-    age : "ss"},
-    {name : "dd",
-    age : "ss"},
-    {name : "dd",
-    age : "ss"},
-    
-]
+const age = prompt("how old r u?")
+
+if (age > 18){
+    content.innerHTML = "u r adult"
+}
+else content.innerHTML = "u r kid"
